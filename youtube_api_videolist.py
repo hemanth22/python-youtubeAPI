@@ -1,8 +1,11 @@
 import googleapiclient.discovery
+import os
 
 playlist_id = "PLU_7CH0rKtkEKPbZP8b5rrquZky-VteXa"
 
-youtube = googleapiclient.discovery.build("youtube", "v3", developerKey = "youtube_api")
+api_key = os.environ.get("youtube_api")
+
+youtube = googleapiclient.discovery.build("youtube", "v3", developerKey=api_key)
 
 request = youtube.playlistItems().list(
     part = "snippet",
