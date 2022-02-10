@@ -33,8 +33,14 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: list comments from youtube
       run: python youtube_api.py
+      env:
+        youtube_api: ${{ secrets.YOUTUBE_API }}
     - name: list playlist from channel
       run: python youtube_api_playlist_channel.py
+      env:
+        youtube_api: ${{ secrets.YOUTUBE_API }}
     - name: list videos from playlist
       run: python youtube_api_videolist.py
+      env:
+        youtube_api: ${{ secrets.YOUTUBE_API }}
 
