@@ -18,7 +18,8 @@ jobs:
       - run:
           command: |
             python --version
-          name: Test
+            python youtube_api2.py
+          name: execute python code
 workflows:
   main:
     jobs:
