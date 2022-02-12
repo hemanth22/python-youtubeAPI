@@ -18,7 +18,7 @@ jobs:
       - run:
           command: |
             python --version
-            python youtube_api2.py
+            python youtube_scrap.py
           name: execute python code
 workflows:
   main:
