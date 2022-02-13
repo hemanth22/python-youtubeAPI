@@ -17,9 +17,8 @@ jobs:
           pypi-cache: false
       - run:
           command: |
-            python --version
-            python youtube_scrap.py
-          name: execute python code
+            pytest --version
+          name: Test
 workflows:
   main:
     jobs:
